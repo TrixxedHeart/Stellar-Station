@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 TrixxedHeart <trixxedheart@gmail.com>
+//
+// SPDX-License-Identifier: MIT
 using Content.Stellar.Shared.Particles;
 
 namespace Content.Stellar.Client.Particles;

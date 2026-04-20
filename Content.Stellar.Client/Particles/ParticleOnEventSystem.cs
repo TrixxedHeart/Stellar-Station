@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 TrixxedHeart <trixxedheart@gmail.com>
+//
+// SPDX-License-Identifier: MIT
 using Content.Stellar.Shared.Particles;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;

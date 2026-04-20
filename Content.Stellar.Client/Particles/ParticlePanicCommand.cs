@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 TrixxedHeart <trixxedheart@gmail.com>
+//
+// SPDX-License-Identifier: MIT
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 
