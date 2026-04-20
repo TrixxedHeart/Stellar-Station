@@ -298,6 +298,7 @@ public sealed partial class ParticleSystem : EntitySystem
             var (id, coords) = _pendingSubEmitters[subIdx];
             subIdx++;
             SpawnEffect(id, coords);
+        }
     }
 
     #endregion
