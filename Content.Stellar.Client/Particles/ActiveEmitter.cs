@@ -1,9 +1,9 @@
 using System.Numerics;
-using Content.Shared._ST.Particles;
+using Content.Stellar.Shared.Particles;
 using Robust.Client.Graphics;
 using Robust.Shared.Map;
 
-namespace Content.Client._ST.Particles;
+namespace Content.Stellar.Client.Particles;
 
 /// <summary>
 /// A running particle emitter and its live particle pool.

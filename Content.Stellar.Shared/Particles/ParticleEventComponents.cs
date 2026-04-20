@@ -1,6 +1,6 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._ST.Particles;
+namespace Content.Stellar.Shared.Particles;
 
 /// <summary>
 /// Base class for all particle-on-event components.

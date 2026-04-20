@@ -2,7 +2,7 @@ using System.Numerics;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._ST.Particles;
+namespace Content.Stellar.Shared.Particles;
 
 /// <summary>Keyframe for a float-over-lifetime curve. Time is normalised 0–1.</summary>
 [DataDefinition]

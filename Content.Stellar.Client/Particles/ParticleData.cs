@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace Content.Client._ST.Particles;
+namespace Content.Stellar.Client.Particles;
 
 /// <summary>
 /// A single live particle. Class so it can be pooled in place.
@@ -9,7 +9,7 @@ public sealed class ParticleData
 {
     /// <summary>
     /// Screen-space offset from the emitter origin, X = right, Y = up.
-    /// All simulation runs in this space regardless of <see cref="Content.Shared._ST.Particles.ParticleEffectPrototype.WorldSpace"/>.
+    /// All simulation runs in this space regardless of <see cref="Content.Stellar.Shared.Particles.ParticleEffectPrototype.WorldSpace"/>.
     /// </summary>
     public Vector2 LocalOffset;
 

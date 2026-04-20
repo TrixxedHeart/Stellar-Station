@@ -1,5 +1,5 @@
 using System.Numerics;
-using Content.Shared._ST.Particles;
+using Content.Stellar.Shared.Particles;
 using Content.Shared.CCVar;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -12,7 +12,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 using Robust.Shared.Utility;
 
-namespace Content.Client._ST.Particles;
+namespace Content.Stellar.Client.Particles;
 
 /// <summary>
 /// Manages active particle emitters on the client, including their simulation and rendering via <see cref="ParticleOverlay"/>.

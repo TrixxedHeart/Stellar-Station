@@ -1,6 +1,6 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._ST.Particles;
+namespace Content.Stellar.Shared.Particles;
 
 /// <summary>
 /// Spawns a particle effect on this entity when it initializes.

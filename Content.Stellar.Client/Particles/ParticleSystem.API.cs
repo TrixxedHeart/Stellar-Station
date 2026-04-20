@@ -1,8 +1,8 @@
-using Content.Shared._ST.Particles;
+using Content.Stellar.Shared.Particles;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._ST.Particles;
+namespace Content.Stellar.Client.Particles;
 
 /// <summary>
 /// API for <see cref="ParticleSystem"/>.

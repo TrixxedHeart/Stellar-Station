@@ -1,10 +1,10 @@
-using Content.Shared._ST.Particles;
+using Content.Stellar.Shared.Particles;
 
-namespace Content.Client._ST.Particles;
+namespace Content.Stellar.Client.Particles;
 
 /// <summary>
 /// Spawns a particle effect on this client when an entity with
-/// <see cref="ParticleEmitterComponent"/> enters the local view (MapInitEvent).
+/// <see cref="Content.Stellar.Shared.Particles.ParticleEmitterComponent"/> enters the local view (MapInitEvent).
 /// </summary>
 public sealed class ParticleEmitterSystem : EntitySystem
 {

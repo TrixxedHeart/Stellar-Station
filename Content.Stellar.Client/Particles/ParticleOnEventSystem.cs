@@ -1,4 +1,4 @@
-using Content.Shared._ST.Particles;
+using Content.Stellar.Shared.Particles;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Projectiles;
@@ -8,15 +8,14 @@ using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._ST.Particles;
+namespace Content.Stellar.Client.Particles;
 
 /// <summary>
-/// Client-side system that listens for events and spawns particles based on <see cref="ParticleOnEventComponent"/>
+/// Client-side system that listens for events and spawns particles based on <see cref="ParticleOnEventBase"/>
 /// </summary>
 public sealed class ParticleOnEventSystem : EntitySystem
 {
     [Dependency] private readonly ParticleSystem _particles = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
 
     // Track emitters spawned by OnThrown so we can stop them when the entity lands

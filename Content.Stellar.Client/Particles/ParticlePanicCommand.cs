@@ -1,11 +1,11 @@
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 
-namespace Content.Client._ST.Particles;
+namespace Content.Stellar.Client.Particles;
 
 /// <summary>
 /// Immediately kills all active particle emitters and their live particles.
-/// Useful if something goes wrong and needs to be killed FAST..
+/// Useful if something goes wrong and needs to be killed FAST.
 /// </summary>
 [AnyCommand]
 public sealed class ParticlePanicCommand : IConsoleCommand
