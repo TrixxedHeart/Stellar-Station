@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: MIT
 using System.Numerics;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 using Robust.Shared.Utility;
 
 namespace Content.Stellar.Shared.Particles;
@@ -61,9 +62,18 @@ public sealed partial class EmissionShapeData
 
 /// <summary>Defines a reusable particle effect prototype.</summary>
 [Prototype]
-public sealed partial class ParticleEffectPrototype : IPrototype
+public sealed partial class ParticleEffectPrototype : IPrototype, IInheritingPrototype
 {
     [IdDataField] public string ID { get; private set; } = default!;
+
+    /// <inheritdoc/>
+    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<ParticleEffectPrototype>))]
+    public string[]? Parents { get; private set; }
+
+    /// <inheritdoc/>
+    [NeverPushInheritance]
+    [AbstractDataField]
+    public bool Abstract { get; private set; }
 
     #region =^..^= Visuals =^..^=
 
@@ -93,6 +103,7 @@ public sealed partial class ParticleEffectPrototype : IPrototype
 
     /// <summary>Draw order. Higher values render on top.</summary>
     [DataField] public int RenderLayer { get; private set; }
+
 
     #endregion
     #region =^..^= Size =^..^=
@@ -197,6 +208,12 @@ public sealed partial class ParticleEffectPrototype : IPrototype
     /// <summary>Per-particle spin speed variance in degrees per second.</summary>
     [DataField] public Angle RotationSpeedVariance { get; private set; }
 
+    /// <summary>
+    /// When true, each particle's sprite is rotated to align with its velocity direction.
+    /// Overrides <see cref="StartRotation"/> and <see cref="RotationSpeed"/>.
+    /// </summary>
+    [DataField] public bool AlignToVelocity { get; private set; }
+
     #endregion
     #region =^..^= Emission =^..^=
 
@@ -235,6 +252,12 @@ public sealed partial class ParticleEffectPrototype : IPrototype
     /// When false, particles move relative to the emitter origin.
     /// </summary>
     [DataField] public bool WorldSpace { get; private set; } = true;
+
+    /// <summary>
+    /// World-space offset from the emitter origin applied to particle spawn positions.
+    /// Useful for nudging effects away from entity anchor points.
+    /// </summary>
+    [DataField] public Vector2 SpawnOffset { get; private set; }
 
     #endregion
     #region =^..^= Shape =^..^=
