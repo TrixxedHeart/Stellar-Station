@@ -505,7 +505,6 @@ public sealed partial class ParticleSystem : EntitySystem
                 if (emitter.Age < burst.Time)
                     continue;
 
-                // Bypass quality settings for gameplay-critical particles
                 var qualityMult = QualityMultipliers[Math.Clamp(_quality, 0, QualityMultipliers.Length - 1)];
                 var toEmit = (int)Math.Ceiling(burst.Count * qualityMult * emitter.Intensity);
                 for (int j = 0; j < toEmit && _liveParticleCount < _globalBudget; j++)
@@ -746,6 +745,7 @@ public sealed partial class ParticleSystem : EntitySystem
     /// </summary>
     private void AgeOffScreenParticles(ActiveEmitter emitter, float dt)
     {
+        emitter.Age += TimeSpan.FromSeconds(dt);
         foreach (var p in emitter.Particles)
         {
             if (!p.Alive) continue;
